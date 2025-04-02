@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
     const [users, setUsers] = useState([]);
+    const navigate = useNavigate();
     const gettingUser = async () => {
         try {
             const { data } = await axios.get(`https://vercel-deployment-backend.onrender.com/api/v1/auth/get`);
@@ -22,7 +24,7 @@ const HomePage = () => {
                 <div className='col-md-12'>
 
                     <h1 className='text-center'>User List</h1>
-                    <button className='btn btn-primary' onClick={() => navigator(`/create`)}Add User></button>
+                    <button className='btn btn-primary' onClick={() => navigator(`/create`)}>Add User</button>
                     <table class="table">
                         <thead>
                             <tr>
