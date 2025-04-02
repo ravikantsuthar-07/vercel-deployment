@@ -37,7 +37,7 @@ const CreateUserPage = () => {
       }
     } catch (error) {    
       console.log(error);
-      alert(error?.message);
+      alert(error?.errors?.message);
     }
   }
   return (
