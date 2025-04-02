@@ -24,7 +24,7 @@ const HomePage = () => {
                 <div className='col-md-12'>
 
                     <h1 className='text-center'>User List</h1>
-                    <button className='btn btn-primary' onClick={() => navigator(`/create`)}>Add User</button>
+                    <button className='btn btn-primary' onClick={navigator(`/create`)}>Add User</button>
                     <table class="table">
                         <thead>
                             <tr>
