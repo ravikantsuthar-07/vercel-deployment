@@ -21,7 +21,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api/v1/auth', authRoutes);
-app.use('/', (req, res) => {
+
+app.get('/', (req, res) => {
 	return "<h1>Hello </h1>"
 })
 const PORT = process.env.PORT || 8000;
