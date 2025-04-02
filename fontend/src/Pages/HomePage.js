@@ -5,7 +5,7 @@ const HomePage = () => {
     const [users, setUsers] = useState([]);
     const gettingUser = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:8080/api/v1/auth/get`);
+            const { data } = await axios.get(`https://vercel-deployment-backend.onrender.com/api/v1/auth/get`);
             if (data?.success) {
                 setUsers(data?.user);
             }
